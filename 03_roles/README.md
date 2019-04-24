@@ -67,6 +67,8 @@ This exercise will give a general understand of using Roles to manage custom run
      * `knife node run_list set apache_web 'role[apache]'`
        * Note: runlists are not checked against the Chef Server, so be careful here, it's easy to make a typo
    * Check your work again with `knife node show apache_web`, you should see the role assigned under run_list
+     * Note: On windows machines, you might get something strange in the run_list field, like `run_list: recipe[roles]` or `run_list: recipe[recipes]`. If you ever see this, try running:
+       * `knife node run_list set apache_web "'role[apache]'"`
      * Note that the "roles" section is still empty
 
 6. Execute the chef-client on apache_web

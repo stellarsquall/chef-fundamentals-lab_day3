@@ -47,9 +47,9 @@ This exercise will give a general understand of using Roles to manage custom run
    * This is all that's required for the role, but you may wish to add some override attributes for fun.
      * Overwrite the `node['apache']['company_name']` attribute you created in the apache cookbook. Something like:
      ```
-     override_attributes 'apache' => {
-     'company_name' => 'Apache Inc.'
-     }
+       override_attributes({'apache' => {
+         'company_name' => 'Apache Inc.'}
+       })
      ```
      
 4. Upload the role to the Chef Server

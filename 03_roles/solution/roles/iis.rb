@@ -1,6 +1,6 @@
 name 'iis'
 description 'role for IIS webservers'
-run_list 'recipe[mychef_client]','recipe[myiis]'
-default_attributes 'apache' => {
-  'company_name' => 'IIS Inc.'
-}
+run_list 'recipe[mychef_client]','recipe[apache]'
+override_attributes({'myiis' => {
+  'company_name' => 'IIS Inc.'}
+})

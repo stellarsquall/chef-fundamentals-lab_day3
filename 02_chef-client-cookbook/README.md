@@ -76,7 +76,7 @@ _This exercise will be guided by your instructor. Check out the blog post [Writi
      * Check your work:
        * `knife node show apache_web`
    * Run the chef-client on apache_web
-     * `knife ssh APACHE_WEB_IP -x chef -P PASSWORD 'sudo chef-client'`
+     * `knife ssh APACHE_WEB_IP -m -x chef -P PASSWORD 'sudo chef-client'`
 
 9. Check your work
    * Discussion: how can we verify the changes?
@@ -86,4 +86,4 @@ _This exercise will be guided by your instructor. Check out the blog post [Writi
      * Run this command on apache_web:
        * `ps awux | grep chef-client`
        * You can do this with knife ssh:
-         * `knife ssh APACHE_WEB_IP -x chef -P PASSWORD "ps awux | grep chef-client"`
+         * `knife ssh APACHE_WEB_IP -m -x chef -P PASSWORD "ps awux | grep chef-client"`

@@ -58,7 +58,7 @@ _Attributes are how cookbooks can be made data-driven, providing switches or "tu
    <html>
      <body>
         <h1>Hello, world!</h1>
-        <h2>Property of <%= node['apache']['company_user']%> from <%= node['apache']['company_name']%>
+        <h2>Property of <%= node['apache']['company_user']%> from <%= node['apache']['user_name']%>
         <h2>platform: <%= node['platform'] %></h2>
         <h2>ipaddress: <%= node['ipaddress'] %></h2>
         <h2>memory: <%= node['memory']['total'] %></h2>
@@ -74,5 +74,6 @@ _Attributes are how cookbooks can be made data-driven, providing switches or "tu
      * Check that the cookbook has been uploaded with `knife cookbook list`
    * Log into the apache_web cookbook and execute `sudo chef-client`
      * Alternatively, use the knife ssh commmand:
-     * `knife ssh APACHE_WEB_IP -x chef -P PASSWORD 'sudo chef-client'`
+     * `knife ssh APACHE_WEB_IP -m -x chef -P PASSWORD 'sudo chef-client'`
+       * Notes the --manual-list (-m) option is used to specify a list of IPs to run the command on, like 'IP1 IP2 IP3...'
    * Verify your results by checking your Hello, world page, or by using knife ssh to curl the localhost

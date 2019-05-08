@@ -72,7 +72,7 @@ _Attributes are how cookbooks can be made data-driven, providing switches or "tu
      * First, update the version in the metadata.rb file to a new minor release.
      * Run `berks install` followed by `berks upload`
      * Check that the cookbook has been uploaded with `knife cookbook list`
-   * Log into the apache_web cookbook and execute `sudo chef-client`
+   * Log into the apache_web node and execute `sudo chef-client`
      * Alternatively, use the knife ssh commmand:
      * `knife ssh APACHE_WEB_IP -m -x chef -P PASSWORD 'sudo chef-client'`
        * Notes the --manual-list (-m) option is used to specify a list of IPs to run the command on, like 'IP1 IP2 IP3...'

@@ -58,7 +58,7 @@ _Attributes are how cookbooks can be made data-driven, providing switches or "tu
    <html>
      <body>
         <h1>Hello, world!</h1>
-        <h2>Property of <%= node['apache']['user_name']%> from <%= node['apache']['user_name']%>
+        <h2>Property of <%= node['apache']['user_name']%> from <%= node['apache']['company_name']%>
         <h2>platform: <%= node['platform'] %></h2>
         <h2>ipaddress: <%= node['ipaddress'] %></h2>
         <h2>memory: <%= node['memory']['total'] %></h2>
